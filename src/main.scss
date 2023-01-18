@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* для плавной прокрутки */
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1260px;
+    position: relative;
+}

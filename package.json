@@ -4,7 +4,7 @@
   "description": "",
   "main": "webpack.base.config.js",
   "scripts": {
-    "run": "webpack serve --open --config ./webpack.config.js --env mode=dev",
+    "serve": "webpack serve --open --config ./webpack.config.js --env mode=dev",
     "build": "webpack --config ./webpack.config.js --env mode=prod",
     "lint": "eslint . --ext .ts"
   },
@@ -20,7 +20,7 @@
     "@typescript-eslint/parser": "^5.46.0",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
-    "css-loader": "^6.7.2",
+    "css-loader": "^6.7.3",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-typescript": "^17.0.0",
     "eslint-config-prettier": "^8.3.0",
@@ -34,7 +34,7 @@
     "postcss-loader": "^7.0.2",
     "postcss-preset-env": "^7.8.3",
     "prettier": "2.8.3",
-    "sass": "^1.56.2",
+    "sass": "^1.57.1",
     "sass-loader": "^13.2.0",
     "source-map-loader": "^4.0.1",
     "style-loader": "^3.3.1",

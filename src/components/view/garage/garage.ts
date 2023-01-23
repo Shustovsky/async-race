@@ -81,8 +81,7 @@ export class Garage {
         const id = Number(updtBtn?.getAttribute('item-update-id'));
         console.log(id);
         console.log(car);
-        const data = await this.api.updateCar(id, car);
-        return data;
+        return await this.api.updateCar(id, car);
     }
 
     private createGarageControl(): HTMLDivElement {
@@ -275,13 +274,8 @@ export class Garage {
             const stopBtn = <HTMLButtonElement>document.getElementById(`stop-car-${car.id}`);
             startBtn.disabled = true;
             stopBtn.disabled = false;
-            this.startController(car.id || 0);
         });
         return startBtn;
-    }
-
-    private startController(id: number) {
-        //TODO
     }
 
     private createStopButton(car: Car): HTMLButtonElement {
@@ -293,13 +287,8 @@ export class Garage {
             const startBtn = <HTMLButtonElement>document.getElementById(`start-car-${car.id}`);
             startBtn.disabled = false;
             stopBtn.disabled = true;
-            this.stopController(car.id || 0);
         });
         return stopBtn;
-    }
-
-    private stopController(id: number) {
-        //TODO
     }
 
     private createCarTrack(car: Car) {
@@ -315,8 +304,7 @@ export class Garage {
         const carBody = document.createElement('div');
         carBody.classList.add('car-body');
         carBody.setAttribute('data-car-id', `${car.id}`);
-        const carImage = this.renderCarImage(car.color);
-        carBody.innerHTML = carImage;
+        carBody.innerHTML = this.renderCarImage(car.color);
         carBody.addEventListener('transitionend', async () => {
             //TODO await handleWinners(carBody, car.id);
         });

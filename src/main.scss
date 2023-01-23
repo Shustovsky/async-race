@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* для плавной прокрутки */
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1260px;
+    position: relative;
+}
+
+.inactive {
+    display: none;
+}
+
+button {
+    margin: 5px;
+    padding: 5px;
+    background-color: #868686;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.item {
+    border: 1px solid black;
+    border-bottom: 5px solid black;
+
+    .car-track {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .car-body {
+            width: 100px;
+            height: 50px;
+
+            svg {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .flag {
+            font-size: 40px;
+        }
+    }
+}
+
+.table {
+
+    &__head {
+        display: flex;
+
+        div {
+            width: 100px;
+            border: 1px solid;
+            text-align: center;
+        }
+    }
+}
